@@ -1,14 +1,38 @@
 import java.util.ArrayList;
 
+interface Programmer {
+    public abstract String writeACode();
+}
+
 public class ProgrammersHub {
     public static void main(String[] args) {
-        ArrayList<Prograammer> prograammers = new ArrayList<Prograammer>();
-        prograammers.add(new SoftwareApplicationDeveloper());
-        prograammers.add(new WebDeveloper());
-        prograammers.add(new GameDeveloper());
+        ArrayList<Programmer> programmers = new ArrayList<Programmer>();
+        programmers.add(new SoftwareApplicationDeveloper());
+        programmers.add(new WebDeveloper());
+        programmers.add(new GameDeveloper());
 
-        for (Prograammer prograammer : prograammers) {
-            System.out.println(prograammer.writeACode());
+        for (Programmer programmer : programmers) {
+            System.out.println(programmer.writeACode());
         }
+    }
+}
+
+  
+
+class GameDeveloper implements Programmer {
+    public String writeACode() {
+        return "I love making gaames!!!!";
+    }
+}
+
+class SoftwareApplicationDeveloper implements Programmer {
+    public String writeACode() {
+        return "I make applications for your devices!!!!";
+    }
+}
+
+class WebDeveloper implements Programmer {
+    public String writeACode() {
+        return "I make websites!!!!1";
     }
 }
