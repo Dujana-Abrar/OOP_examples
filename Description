@@ -48,3 +48,19 @@ Disadvantages of Encapsulation
 
 1.You can’t access private date outside the class.
 2.If proper encapsulation is not followed in a code, it leads to its bad designing.
+
+
+Inheritence
+
+It allows one class to acquire all the properties of another class. The keyword used for inheritance is extends.
+
+Advantages
+1. One of the key benefits of inheritance is to minimize the amount of duplicate code in an application by sharing common code amongst several subclasses. Where equivalent code exists in two related classes, the hierarchy can usually be refactored to move the common code up to a mutual superclass. This also tends to result in a better organization of code and smaller, simpler compilation units.
+2. Inheritance can also make application code more flexible to change because classes that inherit from a common superclass can be used interchangeably. If the return type of a method is superclass
+3. facilitate to use public methods of base class without rewriting the same.
+4. extends the base class logic as per business logic of the derived class.
+
+Disadvantages
+
+1. Main disadvantage of using inheritance is that the two classes (parent and child class) gets tightly coupled.
+This means that if we change code of parent class, it will affect to all the child classes which is inheriting/deriving the parent class, and hence, it cannot be independent of each other.
