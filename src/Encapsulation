@@ -1,0 +1,30 @@
+class Employee{
+    private String Name;
+    private int Age;
+
+    public String getName(){
+        return Name;
+    }
+
+    public int getAge(){
+        return Age;
+    }
+
+    public void setAge(int Age){
+        this.Age = Age;
+    }
+
+    public void setName(String Name){
+        this.Name = Name;
+    }
+    
+}
+public class EncapsTest{
+    public static void main(String args[]){
+        Employee employee = new Employee();
+        employee.setName("Romeo");
+        employee.setAge(16);
+        System.out.println("Employee Name:-  " + employee.getName());
+        System.out.println("Employee Age:-  " + employee.getAge());
+    }
+}
