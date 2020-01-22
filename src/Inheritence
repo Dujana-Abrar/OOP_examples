@@ -1,0 +1,74 @@
+class Vehicle 
+{ 
+	public int gear; 
+	public int speed; 
+		
+	public Vehicle(int gear, int speed) 
+	{ 
+		this.gear = gear; 
+		this.speed = speed; 
+	} 
+		
+	public void Brake(int decrement) 
+	{ 
+		speed = speed + decrement; 
+	} 
+		
+	public void accelerate(int increment) 
+	{ 
+		speed = speed + increment; 
+	}
+	
+	public String toString() 
+	{ 
+		return("No of gears are "+gear+"\nSpeed of the vehicle is "+speed+"\n"); 
+	} 
+} 
+
+ 
+class Car extends Vehicle 
+{ 
+    int tires;
+    
+	Car(int gear,int speed, int tires) 
+	{ 
+		super(gear, speed); 
+		this.tires = tires; 
+	} 
+	
+	@Override
+	public String toString() 
+	{ 
+		return (super.toString() + "And the number of tires = "+tires); 
+	} 
+} 
+
+class Bike extends Vehicle 
+{ 
+    int tires;
+	Bike(int gear,int speed, int tires) 
+	{ 
+		super(gear, speed); 
+		this.tires = tires; 
+	} 
+	
+	@Override
+	public String toString() 
+	{ 
+		return (super.toString() + "And the number of tires = "+tires); 
+	} 
+} 
+
+public class Main 
+{ 
+	public static void main(String args[]) 
+	{ 
+		
+		Car car = new Car(5, 200, 4);
+		System.out.println(car.toString()); 
+		
+		Bike bike = new Bike(4, 100 , 2);
+		System.out.println(bike.toString()); 
+			
+	} 
+} 
