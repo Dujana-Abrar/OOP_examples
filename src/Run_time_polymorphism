@@ -1,0 +1,40 @@
+class Human
+{ 
+    void intro() 
+    { 
+        System.out.println("I am a human"); 
+    } 
+} 
+  
+class Male extends Human 
+{ 
+    void intro() 
+    { 
+        System.out.println("I am a male"); 
+    } 
+} 
+  
+class Female extends Human 
+{ 
+    void intro() 
+    { 
+        System.out.println("I am a female"); 
+    } 
+} 
+  
+public class Main
+{ 
+    public static void main(String args[]) 
+    { 
+        Human human = new Human(); 
+        Male male = new Male(); 
+        Female female = new Female(); 
+        Human human1; 
+        human1 = human; 
+        human.intro(); 
+        human = male; 
+        human.intro(); 
+        human = female; 
+        human.intro(); 
+    } 
+}
